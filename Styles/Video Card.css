@@ -1,0 +1,94 @@
+.video-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  row-gap: 32px;
+}
+
+.video-thumbnail-container {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.video-thumbnail-container img {
+  width: 100%;
+}
+
+.video-time {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  padding: 2px 4px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 2px;
+}
+
+.video-info-container {
+  display: flex;
+}
+
+.channel-picture {
+  width: 48px;
+}
+
+.channel-picture img {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+}
+
+.video-info {
+  flex: 1;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: #606060;
+}
+
+.video-author {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+@media (min-width: 1000px) {
+  .video-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .video-author,
+  .video-stats {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .video-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .video-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 360px) and (max-width: 489px) {
+  .video-card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
